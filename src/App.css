@@ -72,6 +72,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
+    cursor: pointer;
     /* 120% */
 }
 
@@ -88,6 +89,7 @@
     border-radius: 11px;
     background: #02AB6C;
     margin: 63.5px 31px;
+    cursor: pointer;
 }
 
 #barDiv {
