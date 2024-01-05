@@ -4,12 +4,11 @@ import { data } from '../Graph/Data'
 import greenLogo from '../images/greenLogo.svg'
 import Vector from '../images/Vector.svg'
 import Ellipse from '../images/Ellipse.svg'
-
 import dropDownArr from '../images/dropDownArr.svg'
 import '../App.css';
-import PieChartComp from '../Graph/PieChart.jsx'
 import SuuplierTable from '../Graph/SuuplierTable.jsx'
 import PieChart from '../Graph/PieChart.jsx'
+import Card from './Card.jsx'
 
 const Main = () => {
 
@@ -44,7 +43,7 @@ const Main = () => {
 
 
     return (
-        <div>
+        <div className='right-section'>
             <div id='topBar'>
                 <div id='topbar-section1'>
                     <img src={greenLogo} alt="" />
@@ -56,6 +55,21 @@ const Main = () => {
                     <img src={Vector} alt="" />
 
                 </div>
+            </div>
+
+            <div className='cards_div'>
+                <Card title={"Purchased goods and Services"}
+                    text1={"441510.9 CO2e"}
+                    text2={"25% YOY!"}
+                />
+                <Card title={"Purchased goods and Services to revenue ratios"}
+                    text1={"441510.9 CO2e"}
+                    text2={"25% YOY!"}
+                />
+                <Card title={"Category-1"}
+                    text1={"441510.9 CO2e"}
+                    text2={"25% YOY!"}
+                />
             </div>
             <div id='barDiv'>
                 <div id='barBoxShadow'>
@@ -69,11 +83,17 @@ const Main = () => {
                 <div></div>
             </div>
 
-            <div>
-                <PieChart Data={data} />
+            <div className='bottom-charts'>
+                <div id='pieChartHeading'>
+                    <p>Emission by Supplier</p>
+                    <div id='pie'>
+                        <PieChart Data={data} />
+                    </div>
+                </div>
+                <SuuplierTable />
+
             </div>
 
-            <SuuplierTable />
         </div>
     )
 }
